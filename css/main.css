@@ -151,9 +151,9 @@ section:nth-child(2) {
       width: 49%; }
   section:nth-child(2) form > div:nth-child(6) div {
     width: 32%; }
-  section:nth-child(2) form > div:nth-child(7) {
+  section:nth-child(2) form > section {
     flex-direction: column; }
-  section:nth-child(2) form div select {
+  section:nth-child(2) form section select {
     -moz-appearance: none;
     background-color: #eee;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
