@@ -1,0 +1,380 @@
+*{
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background: #666;
+	@include font($colorWhite, $fontFamily, $fontSize, $fontWeight);
+	position: relative;
+}
+
+
+
+/* TYPOGRAPHY ================================== */
+h1, h2{
+	font-weight: bold;
+	line-height: 1;
+}
+
+h1{
+  color: $colorCharcoal;
+	font-size: 25px;
+  margin-bottom: 20px;
+}
+
+h2{
+  color: $colorCharcoal;
+	font-size: 20px;
+}
+
+h3{
+	color: $colorWhite;
+}
+
+h4{
+	@include font($color000, $fontFamily, $fontSize: 17px, $fontWeight: bold);
+  margin-bottom: 32px;
+}
+
+p{
+	color: $colorWhite;
+  font-size: .8em;
+
+  input[type="radio"]:checked{
+    border: solid $color000 3px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  input[type="radio"]:checked + label{
+    border: solid $color000 3px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: .5px 0;
+}
+
+input[type=radio]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=radio]:checked{
+  transform: scale(1.1);
+}
+
+
+
+/* BASE STRUCTURE =============================== */
+.container{
+  background: $colorWhite;
+  display: flex;
+  @extend %center-element;
+  position: relative;
+  height: 900px;
+  width: 1440px;
+
+  @include mq(mediumLarge){
+    display: block;
+    height: 2000px;
+  }
+
+  @include mq(large){
+    max-width: 100%;
+  }
+}
+
+section{
+  flex: 1;
+  padding: 14px 1% 0;
+
+  @include mq(mediumLarge){
+    max-width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+}
+
+section:nth-child(1){
+  background: $colorWhite;
+  margin-bottom: 30px;
+
+  img{
+    width: 100%;
+  }
+
+  h2{
+    margin-bottom: 22px;
+    text-align: right;
+  }
+
+  div:nth-child(5){
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: space-between;
+
+    p input{
+      cursor: pointer;
+
+      &[type="radio"] {
+          display: none;
+      }
+
+      &[name="size"] + label{
+        background: $color-e0e0e0;
+        cursor: pointer;
+        padding: 1.5em 3.4em;
+      }
+    }
+  }
+
+  h4:nth-child(6){
+    margin-bottom: 10px;
+  }
+
+  > p:nth-child(7){
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+  }
+
+  > p:nth-child(7) > label:nth-child(1){
+    input{
+      background: $color-27AE61;
+    }
+  }
+
+  > p:nth-child(7) > label:nth-child(2){
+    input{
+      background: $color-EB5757;
+    }
+  }
+
+  > p:nth-child(7) > label:nth-child(3){
+    input{
+      background: $color-4F4F4F;
+    }
+  }
+
+  > p:nth-child(7) > label:nth-child(4){
+    input{
+      background: $color-2C9CDB;
+    }
+  }
+
+  > p:nth-child(7) input{
+    padding: 2em 2.5em;
+    cursor: pointer;
+  }
+}
+
+section:nth-child(2){
+  grid-area: shipping;
+  background-color: $color-f2f2f2;
+
+  @include mq(mediumLarge){
+    margin-bottom: 60px;
+  }
+
+  form{
+    label{
+      color: $colorCharcoal;
+      font-weight: bold;
+      margin-bottom: 7px;
+      display: inline-block;
+    }
+
+    input{
+      width: 100%;
+      height: 50px;
+      background-color: $color-eee;
+      border: .5px solid rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      padding: 10px;
+    }
+
+    > div{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      div{
+        flex-direction: row;
+        width: 49%;
+      }
+    }
+
+    > div:nth-child(6){
+      div{
+        width: 32%;
+      }
+    }
+
+    fieldset{
+      select{
+        -moz-appearance: none;
+        background-color: $color-eee;
+        border: .5px solid rgba(0,0,0,0.1);
+        cursor: pointer;
+        height: 50px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+section:nth-child(3){
+  grid-area: summary;
+  background-color: $color-e8e8e8;
+  position: relative;
+
+  @include mq(mediumLarge){
+    padding-bottom: 120px;
+  }
+
+  > h1{
+    display: none;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  fieldset{
+    > div:nth-child(2){
+      overflow: hidden;
+      padding-bottom: 5px;
+
+      p{
+        font-weight: 700;
+        font-size: 1em;
+      }
+
+      p:nth-child(odd){
+        float: left;
+        clear: left;
+      }
+
+      p:nth-child(even){
+        float: right;
+        clear: right;
+      }
+    }
+
+    ul:nth-child(4){
+      overflow: hidden;
+
+      li{
+        color: $colorCharcoal;
+      }
+
+      li:nth-child(1){
+        margin-bottom: 7px;
+      }
+
+      li:nth-child(3){
+        font-weight: bold;
+      }
+
+      li:last-child{
+        font-weight: bold;
+      }
+
+      li:nth-child(odd){
+        float: left;
+        clear: left;
+        margin-top: 7px;
+      }
+
+      li:nth-child(even){
+        float: right;
+        clear: right;
+      }
+    }
+
+    ul:nth-child(6){
+      li{
+        color: $colorCharcoal;
+        margin-bottom: 7px;
+      }
+
+      li:nth-child(1){
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      li:nth-child(6){
+        margin-bottom: 50px;
+      }
+
+      div{
+        background: url(../img/circle-check.svg) no-repeat 0 0 / cover;
+        display: none;
+        height: 120px;
+        @extend %center-element;
+        width: 120px;
+      }
+    }
+
+    > div:nth-child(7){
+      input{
+        background-color: $color-27AE61;
+        color: $colorWhite;
+        cursor: pointer;
+        width: calc(100% - 2rem);
+        height: 5rem;
+        font-size: 1.2em;
+        font-weight: bold;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+      }
+    }
+
+    p{
+      color: $colorCharcoal;
+    }
+
+    hr{
+      margin: 2rem 0;
+      border: 0.05rem solid $color-bbb;
+    }
+  }
+}
+
+.complete{
+  background-color: $color-27AE61;
+  color: $colorWhite;
+  width: calc(100% - 2rem);
+  height: 5rem;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  left: 1rem;
+}
+
+.error{
+  color: rgb(163, 0, 0);
+  font-weight: 900;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+
+.inline{
+  display: flex;
+  justify-content: space-between;
+}

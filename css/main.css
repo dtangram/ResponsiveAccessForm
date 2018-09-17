@@ -1,0 +1,258 @@
+.container, section:nth-child(3) fieldset ul:nth-child(6) div {
+  margin: 0 auto; }
+
+* {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #666;
+  color: #FFF;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  position: relative; }
+
+/* TYPOGRAPHY ================================== */
+h1, h2 {
+  font-weight: bold;
+  line-height: 1; }
+
+h1 {
+  color: #2B2B2B;
+  font-size: 25px;
+  margin-bottom: 20px; }
+
+h2 {
+  color: #2B2B2B;
+  font-size: 20px; }
+
+h3 {
+  color: #FFF; }
+
+h4 {
+  color: #000;
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 32px; }
+
+p {
+  color: #FFF;
+  font-size: .8em; }
+  p input[type="radio"]:checked {
+    border: solid #000 3px;
+    cursor: pointer;
+    font-weight: bold; }
+  p input[type="radio"]:checked + label {
+    border: solid #000 3px;
+    cursor: pointer;
+    font-weight: bold; }
+
+ul {
+  list-style: none;
+  margin: .5px 0; }
+
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+input[type=radio]:checked {
+  transform: scale(1.1); }
+
+/* BASE STRUCTURE =============================== */
+.container {
+  background: #FFF;
+  display: flex;
+  position: relative;
+  height: 900px;
+  width: 1440px; }
+  @media (max-width: 1100px) {
+    .container {
+      display: block;
+      height: 2000px; } }
+  @media (max-width: 1450px) {
+    .container {
+      max-width: 100%; } }
+
+section {
+  flex: 1;
+  padding: 14px 1% 0; }
+  @media (max-width: 1100px) {
+    section {
+      max-width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 15px; } }
+
+section:nth-child(1) {
+  background: #FFF;
+  margin-bottom: 30px; }
+  section:nth-child(1) img {
+    width: 100%; }
+  section:nth-child(1) h2 {
+    margin-bottom: 22px;
+    text-align: right; }
+  section:nth-child(1) div:nth-child(5) {
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: space-between; }
+    section:nth-child(1) div:nth-child(5) p input {
+      cursor: pointer; }
+      section:nth-child(1) div:nth-child(5) p input[type="radio"] {
+        display: none; }
+      section:nth-child(1) div:nth-child(5) p input[name="size"] + label {
+        background: #e0e0e0;
+        cursor: pointer;
+        padding: 1.5em 3.4em; }
+  section:nth-child(1) h4:nth-child(6) {
+    margin-bottom: 10px; }
+  section:nth-child(1) > p:nth-child(7) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px; }
+  section:nth-child(1) > p:nth-child(7) > label:nth-child(1) input {
+    background: #27AE61; }
+  section:nth-child(1) > p:nth-child(7) > label:nth-child(2) input {
+    background: #EB5757; }
+  section:nth-child(1) > p:nth-child(7) > label:nth-child(3) input {
+    background: #4F4F4F; }
+  section:nth-child(1) > p:nth-child(7) > label:nth-child(4) input {
+    background: #2C9CDB; }
+  section:nth-child(1) > p:nth-child(7) input {
+    padding: 2em 2.5em;
+    cursor: pointer; }
+
+section:nth-child(2) {
+  grid-area: shipping;
+  background-color: #f2f2f2; }
+  @media (max-width: 1100px) {
+    section:nth-child(2) {
+      margin-bottom: 60px; } }
+  section:nth-child(2) form label {
+    color: #2B2B2B;
+    font-weight: bold;
+    margin-bottom: 7px;
+    display: inline-block; }
+  section:nth-child(2) form input {
+    width: 100%;
+    height: 50px;
+    background-color: #eee;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    padding: 10px; }
+  section:nth-child(2) form > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    section:nth-child(2) form > div div {
+      flex-direction: row;
+      width: 49%; }
+  section:nth-child(2) form > div:nth-child(6) div {
+    width: 32%; }
+  section:nth-child(2) form fieldset select {
+    -moz-appearance: none;
+    background-color: #eee;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 50px;
+    width: 100%; }
+
+section:nth-child(3) {
+  grid-area: summary;
+  background-color: #e8e8e8;
+  position: relative; }
+  @media (max-width: 1100px) {
+    section:nth-child(3) {
+      padding-bottom: 120px; } }
+  section:nth-child(3) > h1 {
+    display: none;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px; }
+  section:nth-child(3) fieldset > div:nth-child(2) {
+    overflow: hidden;
+    padding-bottom: 5px; }
+    section:nth-child(3) fieldset > div:nth-child(2) p {
+      font-weight: 700;
+      font-size: 1em; }
+    section:nth-child(3) fieldset > div:nth-child(2) p:nth-child(odd) {
+      float: left;
+      clear: left; }
+    section:nth-child(3) fieldset > div:nth-child(2) p:nth-child(even) {
+      float: right;
+      clear: right; }
+  section:nth-child(3) fieldset ul:nth-child(4) {
+    overflow: hidden; }
+    section:nth-child(3) fieldset ul:nth-child(4) li {
+      color: #2B2B2B; }
+    section:nth-child(3) fieldset ul:nth-child(4) li:nth-child(1) {
+      margin-bottom: 7px; }
+    section:nth-child(3) fieldset ul:nth-child(4) li:nth-child(3) {
+      font-weight: bold; }
+    section:nth-child(3) fieldset ul:nth-child(4) li:last-child {
+      font-weight: bold; }
+    section:nth-child(3) fieldset ul:nth-child(4) li:nth-child(odd) {
+      float: left;
+      clear: left;
+      margin-top: 7px; }
+    section:nth-child(3) fieldset ul:nth-child(4) li:nth-child(even) {
+      float: right;
+      clear: right; }
+  section:nth-child(3) fieldset ul:nth-child(6) li {
+    color: #2B2B2B;
+    margin-bottom: 7px; }
+  section:nth-child(3) fieldset ul:nth-child(6) li:nth-child(1) {
+    font-weight: bold;
+    margin-bottom: 30px; }
+  section:nth-child(3) fieldset ul:nth-child(6) li:nth-child(6) {
+    margin-bottom: 50px; }
+  section:nth-child(3) fieldset ul:nth-child(6) div {
+    background: url(../img/circle-check.svg) no-repeat 0 0/cover;
+    display: none;
+    height: 120px;
+    width: 120px; }
+  section:nth-child(3) fieldset > div:nth-child(7) input {
+    background-color: #27AE61;
+    color: #FFF;
+    cursor: pointer;
+    width: calc(100% - 2rem);
+    height: 5rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem; }
+  section:nth-child(3) fieldset p {
+    color: #2B2B2B; }
+  section:nth-child(3) fieldset hr {
+    margin: 2rem 0;
+    border: 0.05rem solid #bbb; }
+
+.complete {
+  background-color: #27AE61;
+  color: #FFF;
+  width: calc(100% - 2rem);
+  height: 5rem;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  left: 1rem; }
+
+.error {
+  color: #a30000;
+  font-weight: 900;
+  padding: 2px;
+  margin-bottom: 20px; }
+
+.inline {
+  display: flex;
+  justify-content: space-between; }
