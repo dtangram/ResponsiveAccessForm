@@ -30,7 +30,7 @@ function changeProduct(){
     let color = document.querySelector('input[name="color"]:checked').value;
 
     productName.innerHTML = size +" "+ color + " JLA Shirt";
-    productImg.src = "/ResponsiveAccessForm/img/" + color + ".jpg";
+    productImg.src = "/img/" + color + ".jpg";
     productDesc.innerHTML = size +" "+ color + " shirt";
 }
 
