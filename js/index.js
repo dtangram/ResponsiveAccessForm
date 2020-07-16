@@ -26,8 +26,8 @@ const submitBTN = document.querySelector(".container section:nth-child(3) div di
 
 
 function changeProduct(){
-    let size = document.querySelector('input[name="size"]:checked').value;
-    let color = document.querySelector('input[name="color"]:checked').value;
+    let size = document.querySelector('input[value]:checked').value;
+    let color = document.querySelector('input[value]:checked').value;
 
     productName.innerHTML = size +" "+ color + " JLA Shirt";
     productImg.src = "../img/" + color + ".jpg";
