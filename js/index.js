@@ -32,12 +32,12 @@ function changeProduct(){
     productName.innerHTML = size +" "+ color + " JLA Shirt";
     productImg.src = "/ResponsiveAccessForm/img/" + color + ".jpg";
     productDesc.innerHTML = size +" "+ color + " shirt";
-    
-    console.log(color);
 }
 
 greenBTN.addEventListener('change', function(){
     changeProduct();
+    
+    console.log(color);
     greenBTN.setAttribute('aria-checked','true');
     redBTN.setAttribute('aria-checked','false');
     blackBTN.setAttribute('aria-checked','false');
